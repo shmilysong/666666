@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/self.css" rel="stylesheet"/>
+<script src="js/jquery.min.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.3"></script>
+<script>
+$(function(){	
+	$(window).scroll(function() {		
+		if($(window).scrollTop() >= 100){
+			$('.actGotop').fadeIn(300); 
+		}else{    
+			$('.actGotop').fadeOut(300);    
+		}  
+	});
+	$('.actGotop').click(function(){
+	$('html,body').animate({scrollTop: '0px'}, 800);});	
+});
+
+window.onload=function(){
+	var map = new BMap.Map("my_map");    // 创建Map实例
+	var point = new BMap.Point(116.4228190000,40.0943610000);//经度和纬度
+	map.centerAndZoom(point,15);
+	var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
+	var marker = new BMap.Marker(point,{icon:myIcon});
+	map.addOverlay(marker);
+    map.enableScrollWheelZoom(true); 
+};
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="on"><img src="img/l.jpg"/></div>
+    <!--导航-->
+		<div class="bar">
+            <a href="index.html" class="btn btn-3">Home</a> 
+            <a href="cs.html" class="btn btn-3">Css作品</a> 
+            <a href="java.html" class="btn btn-3">JS作品</a> 
+            <a href="css3.html" class="btn btn-3">H5+CSS3</a> 
+            <a href="ziwojieshao.html" class="btn btn-3 on">关于我</a>
+		</div>
+        
+        <!--内容-->
+     <div class="cont">
+     	<div class="introduce">
+        	<div class="img">
+        		<img src="img/ren.jpg"/>
+            </div>
+            <div class="right">
+                <h2>I'M 宋亚广</h2>
+                <ul>
+                    <li><a href="javascript:;">年&nbsp&nbsp龄 ： 25</a></li>
+                    <li><a href="javascript:;">地&nbsp&nbsp址 ：昌平区  天通苑</a></li>
+                    <li><a href="javascript:;">工作年限 ：3年</a></li>
+                    <li><a href="javascript:;"><span>到岗时间</span> ：<b>随时</b></a></li>
+                </ul>
+           </div>
+         </div>
+         
+         <div class="bom">
+         	<div class="bt">
+                <a href="javascript:;"><img src="img/qq.jpg"/></a>
+                <a href="javascript:;"><img src="img/weixin.jpg"/></a>
+                <a href="http://weibo.com/u/5545998641/home?topnav=1&wvr=6" target="_blank"><img src="img/weibo.jpg"/></a>
+                <a href="javascript:;"><img src="img/dianhua.jpg"/></a>
+            </div>
+         </div>
+         
+         
+         
+         	<a href="https://github.com/shmilysong/SelfResume/blob/501e086053ea025d88f7265c5c9431bc1b39c509/song%20.docx" class="border-fade" target="_blank" >下载简历</a>
+         
+         
+         
+         <!--自我介绍-->
+         <!--专业技能-->
+         <div class="container">
+        	<h2>Professional skills</h2>
+            <div class="content">
+                <div class="col">
+                    <ul id="skill">
+                        <li><span class="expand html5"></span><em>HTML5</em><b>80%</b></li>
+                        <li><span class="expand css3"></span><em>CSS3</em><b>80%</b></li>
+                        <li><span class="expand jquery"></span><em>jQuery</em><b>70%</b></li>
+                        <li><span class="expand css"></span><em>CSS</em><b>90%</b></li>
+                        <li><span class="expand ajax"></span><em>AJAX</em><b>70%</b></li>
+                        <li><span class="expand jsonp"></span><em>JSONP</em><b>70%</b></li>
+                        <li><span class="expand javascript"></span><em>JS</em><b>80%</b></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+        
+   <!--工作经历-->
+    <div class="work">
+        <div class="work_a">
+        	<h2><a href="javascript:;">Work Experience</a></h2>
+            <div class="con">
+            	<!--中间线-->
+            	<div class="xian">
+                	<p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="con_1">
+                	<h3>2012年7月---2013年9月</h3>
+                    <p class="on">实习员</p>
+                    <p class="com">北京中融国投投资有限公司</p>
+                    <p class="brief">
+                    	刚毕业来北京，在一家金融公司实习。负责他们的业务和投资理财表格整理。
+                    </p>
+                    
+                </div>
+                <div class="con_2">
+                	<h3>2014年3月---2015年7月</h3>
+                    <p class="on">切图仔</p>
+                    <p class="com">北京众诚财富科技有限公司</p>
+                    <p class="brief">
+                    	简单的切图，静态页面的书写。<br />
+					</p>
+                </div>
+                <div class="con_3">
+                	<h3>2015年11月---Now</h3>
+                    <p class="on">前端程序员</p>
+                    <p class="com">北京视秀科技发展有限公司</p>
+                    <p class="brief">
+                    	负责网站开发，手机端网站开发，后台页面，切图，实现效果，交互。<br />
+						链接：www.shixiutv.com
+                    </p>
+                </div>
+                <div class="con_4">
+                	<h3></h3>
+                    <p class="on"></p>
+                    <p class="com"></p>
+                    <p class="brief" style="font-size:26px; margin-top:-10px; ">
+                    	Waiting  For  You ....
+                    </p>
+                </div>
+			</div>
+        </div>
+    </div> 
+        
+    <!--Education-->  
+     <div class="work">
+        <div class="work_a">
+        	<h2><a href="javascript:;">Education</a></h2>
+            <div class="con">
+            	<!--中间线-->
+            	<div class="xian" >
+                	<p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="con_1">
+                	<h3>2009年7月---2012年9月</h3>
+                    <p class="on">濮阳职业技术学院</p>
+                    <p class="com"></p>
+                    <p class="brief">
+                    专业：计算机技术
+                    </p>
+                    
+                </div>
+                <div class="con_2">
+                	<h3>2013年10月---2014年2月</h3>
+                    <p class="on">智能社</p>
+                    <p class="com">移动端</p>
+                    <p class="brief">
+                    	学习了一下移动端的开发,CSS3和H5的效果.
+                    </p>
+                </div>
+                <div class="con_3">
+                	<h3></h3>
+                    <p class="on"></p>
+                    <p class="com"></p>
+                    <p class="brief" style="font-size:26px; margin-top:-10px; ">
+                    	Waiting  For  You ....
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+        
+    <!--总结-->
+    	<div class="jieshao">
+         	Hello! 我叫宋亚广，是一名web前端开发工程师，做事认真负责，爱好网络技术和数码产品，在上学的时候就爱利用业余时间研究coding，这个爱好也是坚持到了现在，入行前端行业也让我感到很享受，我享受编程带给我的成就感，享受逻辑思考的过程，目前离岗在家，可随时到岗就业(可以接受一定程度的加班、和出差)，如果公司需要，请联系我。
+         </div>
+    
+        
+   <!--最后总结-->
+   		<div class="fot">
+        	<div id="my_map">ddddd</div>
+        </div>
+      
+    <div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>      
+ <div>
+</div>
+</body>
+</html>

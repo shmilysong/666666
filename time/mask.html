@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+*{ margin:0; padding:0; list-style:none;}
+html,body{ width:100%; height:100%; overflow:hidden;}
+div{ background:url(../img/meizi.jpg); width:100%; height:100%; background-size:contain; -webkit-mask:url(../img/6.png) no-repeat;  -moz-mask:url(../img/6.png) no-repeat;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('box');
+	
+	document.onmousemove=function(ev){
+		var oEvent=ev || event;
+		
+		var x=oEvent.clientX-200;
+		var y=oEvent.clientY-200;
+		
+		oDiv.style.WebkitMaskPosition=x+'px '+y+'px';
+		oDiv.style.MozMaskPosition=x+'px '+y+'px';
+	};	
+};
+</script>
+</head>
+
+<body>
+<div id="box"></div>
+</body>
+</html>

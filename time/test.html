@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+body{ text-align:center;}
+@-webkit-keyframes test{
+	from{ left:0}
+	to{left:-100%;}	
+}
+@-moz-keyframes test{
+	from{ left:0}
+	to{left:-100%;}	
+}
+@-ms-keyframes test{
+	from{ left:0}
+	to{left:-100%;}	
+}
+*{
+	 margin:0;
+	padding:0;
+	list-astyle:none;
+	
+}
+
+#div1{
+	 width:440px;
+	height:50px;
+	position:relative;
+	margin:100px auto;
+	border:1px solid #000;
+	border-radius:8px;
+	overflow:hidden;
+	
+}
+
+#div2{
+	 width:200%;
+	position:absolute;
+	left:0;
+	top:0;
+	height:50px;
+	background:-webkit-repeating-linear-gradient(-60deg,red 0,red 10px,blue 10px, blue 20px);
+	background:-moz-repeating-linear-gradient(-60deg,red 0,red 10px,blue 10px, blue 20px);
+	background:-ms-repeating-linear-gradient(-60deg,red 0,red 10px,blue 10px, blue 20px);
+	box-shadow:inset 2px 2px 30px #fff;
+	-webkit-animation:4s test linear infinite;
+	-moz-animation:4s test linear infinite;
+	-ms-animation:4s test linear infinite;
+	
+}
+
+
+</style>
+<script>
+window.onload=function(){
+	var oC=document.getElementById('c1');
+	var oC2=document.getElementById('c2');
+	var oDiv2=document.getElementById('div2');	
+	
+	var color1=oC.value;
+	var color2=oC2.value;
+	
+	oC.onchange=function(){
+		color1=this.value;
+		
+		oDiv2.style.background='-webkit-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';
+		oDiv2.style.background='-moz-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';	
+		oDiv2.style.background='-ms-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';		
+	};
+	oC2.onchange=function(){
+		color2=this.value;
+		
+		oDiv2.style.background='-webkit-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';	
+		oDiv2.style.background='-moz-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';
+		oDiv2.style.background='-ms-repeating-linear-gradient(-60deg,'+color1+' 0,'+color1+' 10px,'+color2+' 10px, '+color2+' 20px)';	
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="color" id="c1" value="#ff0000">
+<input type="color" id="c2" value="#0000ff">
+
+<div id="div1">
+	<div id="div2"></div>
+</div>
+</body>
+</html>

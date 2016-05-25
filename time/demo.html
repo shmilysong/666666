@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<style type="text/css">
+*{ padding:0; margin:0; }
+body{ background:#0FC; }
+#but{ width:100px; height:40px; font-size:18px; }
+#myCanvas{background:#fff; }
+</style>
+</head>
+
+<body>
+<canvas id="myCanvas" width="1000" height="600" ></canvas>
+
+<div>
+	<button onClick="clean();" id="but">清 空</button>
+	
+</div>
+
+<script type="text/javascript">
+	var canvas,board,img;
+	 canvas = document.getElementById('myCanvas');
+	 draw = canvas.getContext('2d');
+	  
+	 
+	 var mousePress = false;
+	 var last = null;
+	
+	 function beginDraw(){
+	 mousePress = true;
+	}
+	
+	 function drawing(event){
+	event.preventDefault();
+	if(!mousePress)return;
+	 var xy = pos(event);
+	if(last!=null){
+	draw.beginPath();
+	draw.moveTo(last.x,last.y);
+	draw.lineTo(xy.x,xy.y);
+	draw.stroke();
+	}
+	 last = xy;
+	
+	}
+	
+	 function endDraw(event){
+	 mousePress = false;
+	 event.preventDefault();
+	 last = null;
+	}
+	
+	 function pos(event){
+	 var x,y;
+	if(isTouch(event)){
+	 x = event.touches[0].pageX;
+	 y = event.touches[0].pageY;
+	}else{
+	 x = event.offsetX+event.target.offsetLeft;
+	 y = event.offsetY+event.target.offsetTop;
+	}
+	// log('x='+x+' y='+y);
+	 return {x:x,y:y};
+	}
+	
+	 function log(msg){
+	 var log = document.getElementById('log');
+	 var val = log.value;
+	 log.value = msg+'n'+val; 
+	}
+	
+	 function isTouch(event){
+	 var type = event.type;
+	if(type.indexOf('touch')>=0){
+	 return true;
+	}else{
+	 return false;
+	}
+	}
+	
+	function clean(){
+	draw.clearRect(0,0,canvas.width,canvas.height);
+	
+	}
+	
+	 draw.lineWidth = 2;
+	draw.strokeStyle="#f00";
+	
+	
+	 canvas.onmousedown = beginDraw;
+	 canvas.onmousemove = drawing;
+	 canvas.onmouseup = endDraw;
+	canvas.addEventListener('touchstart',beginDraw,false);
+	canvas.addEventListener('touchmove',drawing,false);
+	canvas.addEventListener('touchend',endDraw,false);
+</script>
+
+<!--[ lim_{x to 0} ]-->
+
+</body>
+
+</html>

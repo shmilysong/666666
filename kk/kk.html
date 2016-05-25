@@ -1,0 +1,4288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<script>
+var arr=[
+	'纪念抗战胜利70周年阅兵',
+	'王朝的女人·杨贵妃',
+	'迷城',
+	'伪装者',
+	'佛本是道',
+	'左手劈刀',
+	'快乐大本营',
+	'哔哔预告片',
+	'铁在烧',
+];
+var arr1=[
+	'全程回顾',
+	'范爷摘下王冠演玉环 再现盛世大唐豪放妖姬',
+	'更新至第56集',
+	'更新至第11集',
+	'十二星座萌妹指导团 蜀黍带我一起玩',
+	'2015-09-06期',
+	'2015-09-06期',
+	'更新至第26集',
+	'更新至第24集',
+];
+var arr2=[
+	'受阅部队进入待阅状态 首长检阅用车仍为国产红旗 二炮将展示7种导弹',
+	'',
+	'糖宝被杀花千骨变妖神',
+	' 胡歌变花花公子首演特工 刀尖上游走斗智斗勇',
+	'',
+	'',
+	'罗晋吴磊上演制服诱惑 刘昊然谈欧阳娜娜羞红脸',
+	'刘涛变身冷艳潜伏特工杀敌 与王雷谱写乱世战火恋歌',
+	'藤森骑兵溃不成阵',
+];
+window.onload=function(){
+	/*搜索框JS*/	
+	var oInp1 = document.getElementById('input1');
+	var oUl1 = document.getElementById('ul1');
+	var aLi = oUl1.getElementsByTagName('li');
+	oInp1.onclick=function(){
+		if(oUl1.style.display=='block')
+		{oUl1.style.display='none'}
+		else
+		{oUl1.style.display='block'};
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].onmouseover=function(){
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].className="";	
+				};
+				this.className='active1';	
+			};
+		};		
+	};
+	/*APPJS*/
+	var oAppbox = document.getElementById('appbox');
+	var aDiv1 = oAppbox.getElementsByTagName('div');
+	for(var i=0;i<aDiv1.length;i++){
+		aDiv1[i].onmouseover=function(){
+			
+			this.className="active2";	
+		};	
+		aDiv1[i].onmouseout=function(){
+			
+			this.className="";	
+		};	
+	};
+	/*导航栏*/
+	var dsj = document.getElementById('dsj');
+	var dsjbox =document.getElementById('dsjbox');
+	var movie = document.getElementById('movie');
+	var moviebox = document.getElementById('moviebox');
+	dsj.onmouseover=function(){
+		dsjbox.style.display='block';	
+	};
+	dsj.onmouseout=function(){
+		dsjbox.style.display='none';	
+	};
+	movie.onmouseover=function(){
+		moviebox.style.display='block';	
+	};
+	movie.onmouseout=function(){
+		moviebox.style.display='none';	
+	};
+	/*小图导航*/
+	var btnbox = document.getElementById('btnbox');
+	var aA = btnbox.getElementsByTagName('a');
+	var bpicbox = document.getElementById('bpicbox');
+	var aAbox = bpicbox.getElementsByTagName('a');
+	var wordlist=document.getElementById('wordlist');
+	var aLiw =wordlist.getElementsByTagName('li');
+	var oWord = document.getElementById('word');
+	for(var i=0;i<aA.length;i++){
+			aA[i].index=i
+			aA[i].onmouseover=function(){
+				for(var i=0;i<aA.length;i++){
+					aAbox[i].style.display='none';
+					aA[i].className='';	
+					/*aLiw[i].className='';*/
+				};
+				this.className='active3';
+				aAbox[this.index].style.display='block';
+				/*aLiw[this.index].className='active4';	*/
+				oWord.innerHTML='<p class="name">'+arr[this.index]+'</p><p>'+arr1[this.index]+'</p><p>'+arr2[this.index]+'</p>';
+			};
+			
+	};
+	/*图片透明层*/
+	var ul2 = document.getElementById('ul2');
+	var li2 = ul2.getElementsByTagName('li');
+	for(var i=0;i<li2.length;i++){
+		li2[i].onmouseover=function(){
+			
+				this.className='active5';	
+		};
+		li2[i].onmouseout=function(){
+			
+				this.className='';	
+		};
+	};
+	var ul3 = document.getElementById('ul3');
+	var li3 = ul3.getElementsByTagName('li');
+	for(var i=0;i<li3.length;i++){
+		li3[i].onmouseover=function(){
+			
+				this.className='active6';	
+		};
+		li3[i].onmouseout=function(){
+			
+				this.className='';	
+		};
+	};
+	/*360网络院线*/
+	var ulwlyx = document.getElementById('ulwlyx');
+	var liwlyx = ulwlyx.getElementsByTagName('li');
+	for(var i=0;i<liwlyx.length;i++){
+		liwlyx[i].onmouseover=function(){
+			this.className="active6";	
+		};	
+		liwlyx[i].onmouseout=function(){
+			this.className="";	
+		};
+	};
+	var ulycwlyx = document.getElementById('ulycwlyx');
+	var liycwlyx = ulycwlyx.getElementsByTagName('li');
+	for(var i=0;i<liycwlyx.length;i++){
+		liycwlyx[i].onmouseover=function(){
+			this.className="active6";	
+		};	
+		liycwlyx[i].onmouseout=function(){
+			this.className="";	
+		};
+	};
+	var btnleft =document.getElementById('btnleft');
+	var btnright =document.getElementById('btnright');
+	var ulycwlyx = document.getElementById('ulycwlyx');
+	var ulwlyx = document.getElementById('ulwlyx');
+	btnleft.onclick=function(){
+		if(ulwlyx.style.display=='block')
+		{
+			ulwlyx.style.display='none';
+			ulycwlyx.style.display='block';
+			}
+		else
+		{
+			ulwlyx.style.display='block';
+			ulycwlyx.style.display='none';
+			};				
+	};
+	btnright.onclick=function(){
+		if(ulwlyx.style.display=='block')
+		{
+			ulwlyx.style.display='none';
+			ulycwlyx.style.display='block';
+			}
+		else
+		{
+			ulwlyx.style.display='block';
+			ulycwlyx.style.display='none';
+			};
+	};
+	var ulyptj = document.getElementById('ulyptj');
+	var liyptj = ulyptj.getElementsByTagName('li');
+	for(var i=0;i<liyptj.length;i++){
+		liyptj[i].onmouseover=function(){
+			for(var i=0;i<liyptj.length;i++){
+				liyptj[i].className='';
+			};
+			this.className='active7';	
+		};	
+	};
+	/*电视剧*/
+	var uldsj1=document.getElementById('uldsj1');
+	var lidsj1=uldsj1.getElementsByTagName('li');
+	for(var i=0;i<lidsj1.length;i++){
+		lidsj1[i].onmouseover=function(){
+			this.className="active6";	
+		};
+		lidsj1[i].onmouseout=function(){
+			this.className="";	
+		};
+	};	
+	var ulgzdsj = document.getElementById('ulgzdsj');
+	var ligzdsj = ulgzdsj.getElementsByTagName('li');
+	for(var i=0;i<ligzdsj.length;i++){
+		ligzdsj[i].onmouseover=function(){
+			for(var i=0;i<ligzdsj.length;i++){
+				ligzdsj[i].className='';
+			};
+			this.className='active7';	
+		};	
+	};
+	var uldsj1=document.getElementById('uldsj2');
+	var lidsj1=uldsj2.getElementsByTagName('li');
+	for(var i=0;i<lidsj1.length;i++){
+		lidsj1[i].onmouseover=function(){
+			this.className="active6";	
+		};
+		lidsj1[i].onmouseout=function(){
+			this.className="";	
+		};
+	};
+	var ulgzdsj2 = document.getElementById('ulgzdsj2');
+	var ligzdsj2 = ulgzdsj2.getElementsByTagName('li');
+	for(var i=0;i<ligzdsj2.length;i++){
+		ligzdsj2[i].onmouseover=function(){
+			for(var i=0;i<ligzdsj2.length;i++){
+				ligzdsj2[i].className='';
+			};
+			this.className='active7';	
+		};	
+	};
+	var cnt6ul1= document.getElementById('cnt-6-ul1');
+	var acnt6li=cnt6ul1.getElementsByTagName('li');
+	for(i=0;i<acnt6li.length;i++){
+		acnt6li[i].onmouseover=function(){
+			for(i=0;i<acnt6li.length;i++){
+				acnt6li[i].className='';	
+			};
+			this.className="active";
+		};
+	};
+	var ulrqzy= document.getElementById('ulrqzy');
+	var ulrqzyli=ulrqzy.getElementsByTagName('li');
+	for(i=0;i<ulrqzyli.length;i++){
+		ulrqzyli[i].onmouseover=function(){
+			for(i=0;i<ulrqzyli.length;i++){
+					ulrqzyli[i].className='';
+			};
+			this.className='active7';	
+		};	
+	};
+	var cnt7ul1= document.getElementById('cnt-7-ul1');
+	var acnt7li=cnt7ul1.getElementsByTagName('li');
+	for(i=0;i<acnt7li.length;i++){
+		acnt7li[i].onmouseover=function(){
+			for(i=0;i<acnt7li.length;i++){
+				acnt7li[i].className='';	
+			};
+			this.className="active";
+		};
+	};
+	var mrgx=document.getElementById('mrgx');
+	
+};
+
+</script>
+</head>
+
+<body>
+<!--hd-->
+<div class="hd">
+	<div class="hd-t">
+    	<div class="hd-t-t" id="#">
+        	<div class="hd-t-t-box clearfix">
+            	<h1><a href="#">360看看</a></h1>
+                <div class="searchbox clearfix">
+                	<input type="text" placeholder="花千骨" id="input1" />
+                    <input type="button" />
+                    <ul id="ul1">
+                    	<li>
+                       		
+                            <div class="sb-div1 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                  
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div2 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div3 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div4 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div5 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div6 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                  
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div7 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div8 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div9 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                       		
+                            <div class="sb-div10 clearfix">
+                            	<span></span>
+                            	<a href="#">花千骨大结局</a>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="appbox clearfix" id="appbox">
+                	<div><a href="#">我的影视</a></div>
+                    <div id="gkjl">
+                    	<a href="#">观看记录</a>
+                        <h5 class="gkjl-box">
+                        	<span></span>
+                            <b></b>
+                            <ul>
+                            	<li>
+                                	<i></i>
+                                    <p>无观看记录</p>
+                                </li>
+                            </ul>
+                        </h5>
+                    </div>
+                    <div><a href="#">APP下载</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="hd-t-b">
+        	<div class="hd-t-b-t clearfix">
+            	<ul class="clearfix fl">
+                	<li><a href="#" class="sy-active a">首页</a></li>
+                    <li><a href="#" class="a">网络院线</a></li>
+                    <li class="dsj" id="dsj">
+                    	<a href="#" class="a">电视剧</a>
+                        <div id="dsjbox">
+                        	<b></b>
+                        	<ul>
+                            	<li><a href="#" >电视剧首页</a></li>
+                                <li><a href="#">内地</a></li>
+                                <li><a href="#">美剧</a></li>
+                                <li><a href="#">韩剧</a></li>
+                                <li><a href="#">TVB</a></li>
+                                <li><a href="#">台剧</a></li>
+                                <li><a href="#">泰剧</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="movie" id="movie">
+                    	<a href="#" class="a">电影</a>
+                        <div id="moviebox">
+                        	<b></b>
+                        	<ul>
+                            	<li><a href="#" >电影首页</a></li>
+                                <li><a href="#">电影馆</a></li>
+                                <li><a href="#">付费电影</a></li>
+                                <li><a href="#">微电影</a></li>
+                                <li><a href="#">排行榜</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="yugao"><a href="#" class="a">预告</a></li>
+                    <li><a href="#" class="a">综艺</a></li>
+                    <li><a href="#" class="a">动漫</a></li>
+                    <li><a href="#" class="a">资讯</a></li>
+                    <li><a href="#" class="a">娱乐</a></li>
+                    <li><a href="#" class="a">直播</a></li>
+                    <li><a href="#" class="a">广场舞</a></li>
+                </ul>
+                <div class="clearfix xiu-box fr">
+                	<a href="#">秀场</a>
+                    <a href="#">体育</a>
+                    <a href="#">搞笑</a>
+                    <a href="#">音乐</a>
+                    <a href="#">游戏</a>
+                    <a href="#">专题</a>
+                </div>
+            </div>
+        	<div class="hd-t-b-b"></div>
+        </div>
+    </div>
+    <div class="hd-picbox">
+    	<div class="hd-bpicbox" id="bpicbox">
+    		<a href="#" class="apic1">1</a>
+            <a href="#" class="apic2">2</a>
+          	<a href="#" class="apic3">3</a>
+            <a href="#" class="apic4">4</a>
+            <a href="#" class="apic5">5</a>
+            <a href="#" class="apic6">6</a>
+           	<a href="#" class="apic7">7</a>
+           	<a href="#" class="apic8">8</a>
+           	<a href="#" class="apic9">9</a>
+        </div>
+        <div class="btnbox clearfix" id="btnbox">
+        	<a href="#" class="active3">
+            	<img src="img/btn-1.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-2.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+        	<a href="#">
+            	<img src="img/btn-3.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-4.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-5.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-6.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-7.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-8.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+            <a href="#">
+            	<img src="img/btn-9.jpg" />
+                <b></b>
+                <i></i>
+            </a>
+        </div>
+        <div class="word">
+            <ul id="wordlist">
+                <li class="active4" id="word">
+                    <p class="name">纪念抗战胜利70周年阅兵</p>
+                    <p>全程回顾</p>
+                    <p>受阅部队进入待阅状态 首长检阅用车仍为国产红旗 二炮将展示7种导弹</p>
+                </li>
+                <!--<li >
+                    <p class="name">可爱的骨头</p>
+                    <p>《魔戒》之父涉猎娈童案题材 可爱少女命丧恋童癖之手</p>
+                    
+                </li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="cnt">
+	<div class="cnt-1 cnt-div clearfix">
+    	<div class="cnt-1-l fl">
+        	<div class="cnt-1-l-t clearfix">
+            	<strong>今日热门</strong>
+                <a href="#">更多>></a>
+            </div>
+            <div class="cnt-1-l-b">
+            	<div class="cnt-1-l-b-t">
+                	<ul class="clearfix" id="ul2">
+                    	<li id="b-li">
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-2.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>共207人阵容空前</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">三军仪仗队女兵亮相</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-4.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>安培下台了？</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">日本首相安培宣布辞职！</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-5.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>或为照顾家庭</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">央视主播郎永淳辞职内情</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-6.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>把画面带给孩子看</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">郭晶晶夫妇观阅兵很激动</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-7.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>重庆男子太疯狂</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">男子将自己锁在公交车底</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-8.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>这得有多不小心</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">女子不慎将钢勺吞进肚中</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-9.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>在一起在一起！</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              
+                            </a>
+                            <h4><a href="#">李冰冰与任泉拍照狂卖萌</a></h4>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="cnt-1-l-b-b">
+                	<ul class="clearfix" id="ul3">
+                    	<li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-12.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>爆笑不停！</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              	
+                            </a>
+                            <h4><a href="#">蛇精病喵星人犯二集锦</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-13.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>《花千骨外传》01集</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              	
+                            </a>
+                            <h4><a href="#">小骨的备胎者联盟</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-14.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>拍新写真送宅男福利</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              	
+                            </a>
+                            <h4><a href="#">模特韩佳恩身材火辣走红</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-15.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>凹凸有致如水中仙子</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              	
+                            </a>
+                            <h4><a href="#">管梓君性感湿身写真曝光</a></h4>
+                        </li>
+                        <li >
+                        	<a href="#" class="p-box">
+                            	<img src="img/cnt-1-16.jpg" />
+                                <div class="s-opa-light"></div>
+                                <div class="s-opa">
+                                	<em>《再战》来袭</em>
+                                </div>
+                                <div class="b-opa"></div>
+                              	
+                            </a>
+                            <h4><a href="#">男人都爱打的手枪</a></h4>
+                        </li>
+                    </ul>
+                    <div class="jcyk">
+                    	<img src="img/cnt-1-11.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="cnt-1-r fr">
+        	<div class="rmjx">热门精选</div>
+            <ul>
+            	<li class="cnt-1-r-libox">
+                    <a href="#" class="p-box">
+                        <img src="img/cnt-1-17.jpg" />
+                        <div class="s-opa-light"></div>
+                        <div class="s-opa">
+                            <em>杀破狼2</em>
+                        </div>
+                    </a>	                           
+                </li>
+                <li class="cnt-1-r-newsbox">
+                	<a href="#" class="clearfix">
+                    	<img src="img/cnt-1-19.jpg" />
+                        <span>进口大片对决华语最强阵容 阿汤哥小黄人pk囧途兄弟</span>
+                    </a>
+                </li>
+                <li class="cnt-1-r-newsbox">
+                	<a href="#" class="clearfix">
+                    	<img src="img/cnt-1-20.jpg" />
+                        <span>纪念反法西斯战争胜利70周年影视展播</span>
+                    </a>
+                </li>
+                <li class="cnt-1-r-libox1">
+                    <a href="#" class="p-box">
+                        <img src="img/cnt-1-18.jpg" />
+                        <div class="s-opa-light"></div>
+                        <div class="s-opa">
+                            <em>徐峥赵薇上演床戏 “霸气”赵薇硬上弓</em>
+                        </div>
+                    </a>	                           
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cnt-2 cnt-div clearfix">
+    	<div class="cnt-2-l fl">
+        	<div class="cnt-2-l-t clearfix">
+            	<strong>360网络院线</strong>
+                <a href="#">更多>></a>
+            </div>
+            <ul class="ul-xs clearfix" id="ulwlyx" style="display:block;">
+            	<li id="li-b">
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-2.gif" />
+                            <div >
+                            	<b></b>
+                                <span>当前有<strong>1352</strong>位影迷在同时观看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">王朝的女人·杨贵妃</p>
+                            <p class="p-b">范冰冰上演大尺度马震戏码</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">王朝的女人·杨贵妃</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span3"></span>
+                                </span>
+                                <em>3.6</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 爱情 大陆</p>
+                                <p>导演：十庆</p>
+                                <p>主演：范冰冰 黎明 吴尊 陈冲 吴刚 屠洪刚 宁静 陈宝国 文章 秦怡</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-2.gif" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1116</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">谜城</p>
+                            <p class="p-b">古天乐拼死解救佟丽娅</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">谜城</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span2"></span>
+                                </span>
+                                <em>5.6</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 动作 大陆</p>
+                                <p>导演：林岭东</p>
+                                <p>主演：古天乐 余文乐 张孝全 佟丽娅 任达华 谢天华 李灿森 元秋 林子善 高捷 马浴柯 谭炳文</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-4.gif" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1052</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">道士下山</p>
+                            <p class="p-b">陈凯歌再现义气江湖</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">道士下山</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span1"></span>
+                                </span>
+                                <em>5.4</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 喜剧 大陆</p>
+                                <p>导演：陈凯歌</p>
+                                <p>主演：王宝强 郭富城 张震 林志玲 房祖名 元华 范伟 吴建豪 林雪 王学圻 李雪健 陈燃 田壮壮 陈虎</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-5.gif" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1127</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">杀破狼2</p>
+                            <p class="p-b">吴京张晋对战肉搏招招致命</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">杀破狼2</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span></span>
+                                </span>
+                                <em>7.4</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 动作 香港</p>
+                                <p>导演：郑保瑞</p>
+                                <p>主演：吴京 托尼·贾 张晋 任达华 古天乐 恭硕良 安志杰 洪金宝 Andrew Ng 吴镇宇</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+            <ul class="ul-yc" id="ulycwlyx">
+            	<li id="li-b-yc">
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-2.gif" />
+                            <div >
+                            	<b></b>
+                                <span>当前有<strong>1047</strong>位影迷在同时观看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">速度与激情7</p>
+                            <p class="p-b">缅怀保罗向经典致敬</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">速度与激情7</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span3"></span>
+                                </span>
+                                <em>8.3</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 动作 美国</p>
+                                <p>导演：温子仁</p>
+                                <p>主演：范·迪塞尔 保罗·沃克 杰森·斯坦森 道恩·强森 卢卡斯·布莱克 隆达·鲁西 埃尔莎·帕塔奇 米歇尔·罗德里格兹 库尔特·拉塞尔 乔丹娜·布鲁斯特 杰曼·翰苏 托尼·贾 泰瑞斯·吉布森 宝娃 Johnny Strong 卢达·克里斯 Anna Colwell 约翰·布罗瑟顿 布里特妮·阿尔杰 Janell Islas Ali Fazal John Koyama Andrew Ayala Susan Santiago Robert Pralgo Roman Mitichyan Johnny C. 布莱恩·马奥尼 乔恩·李·布洛迪 Bradley Bowen 本·布兰肯希普 Kalon Jackson 米切尔·叶 Viktor Hernandez Micky Francis Taylor Hall Roger Herrera King Jon Komp Shin 纳塔莉·凯利 Carlos Ayala Sandhya Chandel Frankie Fronk 塔拉·麦肯 Cori Sims LeJon Jimmy Dempster Scott Dale 盖尔·加朵 史蒂夫·库尔特 Antwan Mills 乔赛琳·唐娜休 Stephanie Langston Paul Chappell 卢克·伊万斯 Daniel McGraw 凯特琳·戴雪儿 杰夫·马修·格洛弗 Shawn Wilson 娜塔莉·艾玛努埃尔 Inder kumar Vince Romo 姜成镐</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-11.png" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1032</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">白幽灵传奇之绝命逃亡</p>
+                            <p class="p-b">凯奇化身骑士拯救刘亦菲</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">白幽灵传奇之绝命逃亡</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span2"></span>
+                                </span>
+                                <em>3.9</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 爱情 大陆</p>
+                                <p>导演：尼克·鲍威尔</p>
+                                <p>主演：尼古拉斯·凯奇 海登·克里斯滕森 刘亦菲 苏嘉航 安志杰 吉克隽逸 Fernando Chien Jawed El Berni Byron Lawson 保罗·菲利普·克拉克 阿拉·萨菲 Anoja Diaz Simon Chin Max Huang 史蒂文·达兹 Vander McLeod Andrew Dasz Eskindir Tesfay Alexandre Bailly Pierre Bourdaud Marc Goodman 石凉 罗恩·斯穆安伯格</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-12.png" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1431</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">革命之路</p>
+                            <p class="p-b">莱奥纳多凯特再续前缘</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">革命之路</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span class="span1"></span>
+                                </span>
+                                <em>7.9</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 爱情 美国</p>
+                                <p>导演：萨姆·门德斯</p>
+                                <p>主演：莱昂纳多·迪卡普里奥 凯特·温丝莱特 凯西·贝茨 迈克尔·珊农 芮安·辛普金斯 泰·辛普金斯 大卫·哈伯 佐伊·卡赞 Jared Smith Jonathan Roumie Adam Mucci Mary DeBellis 凯瑟琳·哈恩 Dylan Clark Marshall 克里斯汀·康诺利 Lorian Gish Maria Rusolo Jason Etter Timothy Warmen John Behlmann T.J. Coan Evan Covey Jay Ferraro Les Gardonyi Gregory Guy Gorden Zoe Hartman Rob L. Hubbard Cristina Marie Sean Marrinan Carly Petrina Harry L. Seddon Kal Thompson Arnold "Doc" Watson Gail Yudain Ted Yudain 马克斯·卡塞拉 Richard Easton Timothy McCartney Chris Miskiewicz Adair Moran Joel Ney Robert Niebrzydowski 杰伊·桑德斯 Sam Rosen Gena Oppenheim Joe Komara Allison Twyford John Ottavino Jo Twiss Frank Girardeau 凯瑟琳·柯婷 Samantha Soule Heidi Armbruster Dan Da Silva 迪伦·贝克 Keith Reddin 尼尔·布莱德森 玛琳·艾尔兰 Max Baker Jon Sampson Peter Barton Kevin Barton 克里斯托弗·菲茨杰.. Chandler Vinton Bethann Schebece Kelsey Robinson Tommaso Antico Justin Misenhelder Emaline Green Isabella Zubor Racheline Maltese Lauren Hubbell Duffy Jackson Dan Zanes Vince Giordano Jon-Erik Kellso Andrew Burton 威尔·桑德森 Alex Hoffman Michael Ciesla Jonathan Yvon</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-2-13.png" />
+                            <div >
+                            	<b></b>
+                                <span><strong>1008</strong>人在看</span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">妈咪</p>
+                            <p class="p-b">陪酒女的迷醉生活</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">妈咪</p>
+                            <div class="star-box">
+                            	<span class="star-box-span">
+                                	<span></span>
+                                </span>
+                                <em>4.9</em>
+                            </div>
+                            <div class="dyjs">
+                            	<p>2015 爱情 大陆</p>
+                                <p>导演：何自强</p>
+                                <p>主演：吴京 托尼·贾 张晋 任达华 古天乐 恭硕良 安志杰 洪金宝 Andrew Ng 吴镇宇</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">和大家一起看</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="btn-left" id="btnleft"></div>
+            <div class="btn-right" id="btnright"></div>
+        </div>
+        <div class="cnt-2-r fr">
+        	<div class="cnt-2-r-t">
+            	影片特别推荐
+            </div>
+            <ul id="ulyptj">
+            	<li class="active7">
+                	<div class="s-box clearfix you-bg">
+                    	<span class="name">哆啦A梦:伴我同行</span>
+                        <span class="icon"></span>
+                        <span class="number">774万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-15.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">哆啦A梦:伴我同行</span>
+                        		<span class="icon"></span>
+                       			<span class="number">774万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix">
+                    	<span class="name">恋爱排班表</span>
+                        <span class="icon"></span>
+                        <span class="number">66.7万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-17.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">恋爱排班表</span>
+                        		<span class="icon"></span>
+                       			<span class="number">66.7万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="name">横冲直撞好莱坞</span>
+                        <span class="icon"></span>
+                        <span class="number">977.4万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-16.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">66.7万</span>
+                        		<span class="icon"></span>
+                       			<span class="number">977.4万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix">
+                    	<span class="name">道士出山2伏魔军团</span>
+                        <span class="icon"></span>
+                        <span class="number">1213.2万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-18.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">道士出山2伏魔军团</span>
+                        		<span class="icon"></span>
+                       			<span class="number">1213.2万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="name">辣妹爱宅男</span>
+                        <span class="icon"></span>
+                        <span class="number">3.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-19.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">辣妹爱宅男</span>
+                        		<span class="icon"></span>
+                       			<span class="number">3.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix">
+                    	<span class="name">对风说爱你</span>
+                        <span class="icon"></span>
+                        <span class="number">115.2万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-2-20.png" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="name">对风说爱你</span>
+                        		<span class="icon"></span>
+                       			<span class="number">115.2万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>                 
+            </ul>
+        </div>
+    </div>
+    <div class="cnt-3 cnt-div clearfix">
+    	<div class="cnt-3-l fl">
+        	<div class="cnt-3-l-t clearfix">
+            	<strong>电视剧</strong>
+                <ul class="clearfix">
+                	<li><a href="#">热门</a></li>
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">内地</a></li>
+                    <li><a href="#">港台</a></li>
+                    <li><a href="#">韩剧</a></li>
+                    <li><a href="#">美剧</a></li>
+                    <li><a href="#">泰剧</a></li>
+                   
+                </ul>
+                <a href="#" class="more">更多>></a>
+            </div>
+            <ul class="ul-xs clearfix" id="uldsj1">
+            	<li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-2.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">21集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.3</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">宦海奇官</p>
+                            <p class="p-b">清装家族恩仇悬疑大剧</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">宦海奇官</p>
+                            
+                            <div class="dyjs">
+                            	<p>21集全</p>
+                                <p>悬疑 喜剧 古装</p>
+                                <p>导演：李添胜</p>
+                                <p>主演：杨怡 马国明</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-3.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">更新至569集</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">8.5</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">爱·回家</p>
+                            <p class="p-b">爆笑TVB版<摩登家庭></p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">爱·回家</p>
+                            
+                            <div class="dyjs">
+                            	<p>更新至569集</p>
+                                <p>喜剧 时装</p>
+                                <p>导演：徐遇安</p>
+                                <p>主演：刘丹 郭少芸</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-4.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">5.9</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">醋娘子</p>
+                            <p class="p-b">打翻醋坛子，笑弹飞出来</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">醋娘子</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>喜剧 偶像 言情 古装</p>
+                                <p>导演：潘嘉德</p>
+                                <p>主演：胡杏儿 吴卓羲</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-5.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">30集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.8</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">名门暗战</p>
+                            <p class="p-b">"点金胜手"后商战再起</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">名门暗战</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>都市 言情 时装</p>
+                                <p>导演：罗永贤</p>
+                                <p>主演：黎耀祥 黄浩然</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-6.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.7</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">飞虎 II</p>
+                            <p class="p-b">男色时代猛男真枪实弹再出击</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">飞虎 II</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>警匪 悬疑 都市 时装</p>
+                                <p>导演：林志华</p>
+                                <p>主演：马德钟 钟嘉欣</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>   
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-7.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.7</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">再战明天</p>
+                            <p class="p-b">徐子珊监狱俘虏吴启华</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">再战明天</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>警匪 都市 言情 时装</p>
+                                <p>导演：林志华</p>
+                                <p>主演：吴启华 张国强</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-8.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">31集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">8.2</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">使徒行者</p>
+                            <p class="p-b">铁三角领衔剧版《无间道》</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">使徒行者</p>
+                            
+                            <div class="dyjs">
+                            	<p>31集全</p>
+                                <p>警匪 悬疑 时装</p>
+                                <p>导演：文伟鸿</p>
+                                <p>主演：苗侨伟 佘诗曼</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-9.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">22集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.1</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">借用一下你的爱</p>
+                            <p class="p-b">出狱哥也有春天</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">借用一下你的爱</p>
+                            
+                            <div class="dyjs">
+                            	<p>22集全</p>
+                                <p>言情 偶像</p>
+                                <p>导演：罗安得</p>
+                                <p>主演：刘瑞琪 夏如芝</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-10.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">74集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.3</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">幸福兑换券</p>
+                            <p class="p-b">胡宇崴变三分钟机车男</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">幸福兑换券</p>
+                            
+                            <div class="dyjs">
+                            	<p>74集全</p>
+                                <p>都市 偶像 言情 时装</p>
+                                <p>导演：吴蒙恩</p>
+                                <p>主演：胡宇崴 袁艾菲</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+               <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-11.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.5</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">再说一次我愿意</p>
+                            <p class="p-b">林佑威再尝离婚痛</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">再说一次我愿意</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>都市 偶像 言情 时装</p>
+                                <p>导演：杨布新</p>
+                                <p>主演：林佑威 魏蔓</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+            	
+            </ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+        </div>
+        <div class="cnt-3-r fr">
+        	<div class="cnt-3-r-t">
+            	本月最受关注电视剧
+            </div>
+            <ul id="ulgzdsj">
+            	<li class="active7">
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">1</span>
+                    	<span class="name">哆啦A梦:伴我同行</span>
+                        <span class="icon"></span>
+                        <span class="number">774万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-15.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">1</span>
+                            	<span class="name">花千骨</span>
+                        		<span class="icon"></span>
+                       			<span class="number">605.1万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">2</span>
+                    	<span class="name">铁在烧</span>
+                        <span class="icon"></span>
+                        <span class="number">522.9万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-13.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">2</span>
+                            	<span class="name">铁在烧</span>
+                        		<span class="icon"></span>
+                       			<span class="number">522.9万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">3</span>
+                    	<span class="name">神犬小七</span>
+                        <span class="icon"></span>
+                        <span class="number">462.6万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-14.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">3</span>
+                            	<span class="name">神犬小七</span>
+                        		<span class="icon"></span>
+                       			<span class="number">462.6万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">4</span>
+                    	<span class="name">伪装者</span>
+                        <span class="icon"></span>
+                        <span class="number">423.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-16.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">4</span>
+                            	<span class="name">伪装者</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">5</span>
+                    	<span class="name">最佳前男友</span>
+                        <span class="icon"></span>
+                        <span class="number">423.4万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-17.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">5</span>
+                            	<span class="name">最佳前男友</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.4万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">6</span>
+                    	<span class="name">左手劈刀</span>
+                        <span class="icon"></span>
+                        <span class="number">368.5万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-18.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">6</span>
+                            	<span class="name">左手劈刀</span>
+                        		<span class="icon"></span>
+                       			<span class="number">368.5万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li> 
+                 <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">7</span>
+                    	<span class="name">克拉恋人</span>
+                        <span class="icon"></span>
+                        <span class="number">353.7万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-19.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">7</span>
+                            	<span class="name">克拉恋人</span>
+                        		<span class="icon"></span>
+                       			<span class="number">353.7万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">8</span>
+                    	<span class="name">春江英雄之秀才遇到兵</span>
+                        <span class="icon"></span>
+                        <span class="number">316.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-20.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">8</span>
+                            	<span class="name">春江英雄之秀才遇到兵</span>
+                        		<span class="icon"></span>
+                       			<span class="number">316.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                 <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">9</span>
+                    	<span class="name">我的绝密生涯</span>
+                        <span class="icon"></span>
+                        <span class="number">257.2万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-21.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">9</span>
+                            	<span class="name">我的绝密生涯</span>
+                        		<span class="icon"></span>
+                       			<span class="number">257.2万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">10</span>
+                    	<span class="name">毕业歌</span>
+                        <span class="icon"></span>
+                        <span class="number">213.1万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-22.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">10</span>
+                            	<span class="name">毕业歌</span>
+                        		<span class="icon"></span>
+                       			<span class="number">213.1万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>                
+            </ul>
+            <div class="dsjsx">
+            	<p class="sx">电视剧筛选</p>
+                <div>
+                	<p class="clearfix">
+                    	<span>类型：</span>
+                        <a href="#">偶像</a>
+                        <a href="#">都市</a>
+                        <a href="#">谍战</a>
+                        <a href="#">古装</a>
+                       
+                    </p>
+                    <p class="clearfix">
+                    	<span>地区：</span>
+                        <a href="#">内地</a>
+                        <a href="#">美国</a>
+                        <a href="#">韩国</a>
+                        <a href="#">香港</a>
+                    </p>
+                    <p class="clearfix">
+                    	<span>年份：</span>
+                        <a href="#">2015</a>
+                        <a href="#">2014</a>
+                        <a href="#">2013</a>
+                        <a href="#">2012</a>
+                    </p>
+                    <p class="clearfix">
+                    	<span>演员：</span>
+                        <a href="#">孙俪</a>
+                        <a href="#">唐嫣</a>
+                        <a href="#">钟汉良</a>
+                        <a href="#">胡歌</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cnt-3 cnt-div clearfix">
+    	<div class="cnt-3-l fl">
+        	<div class="cnt-3-l-t clearfix">
+            	<strong>电视剧</strong>
+                <ul class="clearfix">
+                	<li><a href="#">热门</a></li>
+                    <li><a href="#">最新</a></li>
+                    <li><a href="#">内地</a></li>
+                    <li><a href="#">港台</a></li>
+                    <li><a href="#">韩剧</a></li>
+                    <li><a href="#">美剧</a></li>
+                    <li><a href="#">泰剧</a></li>
+                   
+                </ul>
+                <a href="#" class="more">更多>></a>
+            </div>
+            <ul class="ul-xs clearfix" id="uldsj2">
+            	<li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-2.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">21集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.3</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">宦海奇官</p>
+                            <p class="p-b">清装家族恩仇悬疑大剧</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">宦海奇官</p>
+                            
+                            <div class="dyjs">
+                            	<p>21集全</p>
+                                <p>悬疑 喜剧 古装</p>
+                                <p>导演：李添胜</p>
+                                <p>主演：杨怡 马国明</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-3.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">更新至569集</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">8.5</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">爱·回家</p>
+                            <p class="p-b">爆笑TVB版<摩登家庭></p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">爱·回家</p>
+                            
+                            <div class="dyjs">
+                            	<p>更新至569集</p>
+                                <p>喜剧 时装</p>
+                                <p>导演：徐遇安</p>
+                                <p>主演：刘丹 郭少芸</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-4.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">5.9</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">醋娘子</p>
+                            <p class="p-b">打翻醋坛子，笑弹飞出来</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">醋娘子</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>喜剧 偶像 言情 古装</p>
+                                <p>导演：潘嘉德</p>
+                                <p>主演：胡杏儿 吴卓羲</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-5.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">30集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.8</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">名门暗战</p>
+                            <p class="p-b">"点金胜手"后商战再起</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">名门暗战</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>都市 言情 时装</p>
+                                <p>导演：罗永贤</p>
+                                <p>主演：黎耀祥 黄浩然</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-6.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.7</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">飞虎 II</p>
+                            <p class="p-b">男色时代猛男真枪实弹再出击</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">飞虎 II</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>警匪 悬疑 都市 时装</p>
+                                <p>导演：林志华</p>
+                                <p>主演：马德钟 钟嘉欣</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>   
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-7.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.7</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">再战明天</p>
+                            <p class="p-b">徐子珊监狱俘虏吴启华</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">再战明天</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>警匪 都市 言情 时装</p>
+                                <p>导演：林志华</p>
+                                <p>主演：吴启华 张国强</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-8.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">31集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">8.2</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">使徒行者</p>
+                            <p class="p-b">铁三角领衔剧版《无间道》</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">使徒行者</p>
+                            
+                            <div class="dyjs">
+                            	<p>31集全</p>
+                                <p>警匪 悬疑 时装</p>
+                                <p>导演：文伟鸿</p>
+                                <p>主演：苗侨伟 佘诗曼</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-9.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">22集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.1</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">借用一下你的爱</p>
+                            <p class="p-b">出狱哥也有春天</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">借用一下你的爱</p>
+                            
+                            <div class="dyjs">
+                            	<p>22集全</p>
+                                <p>言情 偶像</p>
+                                <p>导演：罗安得</p>
+                                <p>主演：刘瑞琪 夏如芝</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-10.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">74集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.3</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">幸福兑换券</p>
+                            <p class="p-b">胡宇崴变三分钟机车男</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">幸福兑换券</p>
+                            
+                            <div class="dyjs">
+                            	<p>74集全</p>
+                                <p>都市 偶像 言情 时装</p>
+                                <p>导演：吴蒙恩</p>
+                                <p>主演：胡宇崴 袁艾菲</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+               <li>
+                	<a href="#" class="a-xs">
+                    	<div class="pic-box">
+                        	<img src="img/cnt-3-11.jpg" />
+                            <div >
+                            	<b></b>
+                                <span class="clearfix">
+                                	<i class="jishu fl">20集全</i>
+                                    <i class="fenshu fr">
+                                    	<em class="number">6.5</em>
+                                        <em class="fen">分</em>
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="word-box">
+                        	<p class="p-t">再说一次我愿意</p>
+                            <p class="p-b">林佑威再尝离婚痛</p>
+                        </div>
+                    </a>
+                    <a href="#" class="a-yc">
+                    	<div class="a-yc-t">
+                        	<b></b>
+                            <p class="movie-name">再说一次我愿意</p>
+                            
+                            <div class="dyjs">
+                            	<p>20集全</p>
+                                <p>都市 偶像 言情 时装</p>
+                                <p>导演：杨布新</p>
+                                <p>主演：林佑威 魏蔓</p>
+                            </div>
+                        </div>
+                        <div class="a-yc-b clearfix">
+                        	<span class="a-yc-b-dian"></span>
+                            <span class="a-yc-b-dajia">立即播放</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+            	
+            </ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+        </div>
+        <div class="cnt-3-r fr">
+        	<div class="cnt-3-r-t">
+            	本月最受关注电影
+            </div>
+            <ul id="ulgzdsj2">
+            	<li class="active7">
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">1</span>
+                    	<span class="name">哆啦A梦:伴我同行</span>
+                        <span class="icon"></span>
+                        <span class="number">774万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-15.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">1</span>
+                            	<span class="name">花千骨</span>
+                        		<span class="icon"></span>
+                       			<span class="number">605.1万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">2</span>
+                    	<span class="name">铁在烧</span>
+                        <span class="icon"></span>
+                        <span class="number">522.9万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-13.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">2</span>
+                            	<span class="name">铁在烧</span>
+                        		<span class="icon"></span>
+                       			<span class="number">522.9万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">3</span>
+                    	<span class="name">神犬小七</span>
+                        <span class="icon"></span>
+                        <span class="number">462.6万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-14.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">3</span>
+                            	<span class="name">神犬小七</span>
+                        		<span class="icon"></span>
+                       			<span class="number">462.6万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">4</span>
+                    	<span class="name">伪装者</span>
+                        <span class="icon"></span>
+                        <span class="number">423.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-16.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">4</span>
+                            	<span class="name">伪装者</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">5</span>
+                    	<span class="name">最佳前男友</span>
+                        <span class="icon"></span>
+                        <span class="number">423.4万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-17.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">5</span>
+                            	<span class="name">最佳前男友</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.4万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">6</span>
+                    	<span class="name">左手劈刀</span>
+                        <span class="icon"></span>
+                        <span class="number">368.5万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-18.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">6</span>
+                            	<span class="name">左手劈刀</span>
+                        		<span class="icon"></span>
+                       			<span class="number">368.5万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li> 
+                 <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">7</span>
+                    	<span class="name">克拉恋人</span>
+                        <span class="icon"></span>
+                        <span class="number">353.7万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-19.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">7</span>
+                            	<span class="name">克拉恋人</span>
+                        		<span class="icon"></span>
+                       			<span class="number">353.7万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">8</span>
+                    	<span class="name">春江英雄之秀才遇到兵</span>
+                        <span class="icon"></span>
+                        <span class="number">316.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-20.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">8</span>
+                            	<span class="name">春江英雄之秀才遇到兵</span>
+                        		<span class="icon"></span>
+                       			<span class="number">316.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                 <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">9</span>
+                    	<span class="name">我的绝密生涯</span>
+                        <span class="icon"></span>
+                        <span class="number">257.2万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-21.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">9</span>
+                            	<span class="name">我的绝密生涯</span>
+                        		<span class="icon"></span>
+                       			<span class="number">257.2万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">10</span>
+                    	<span class="name">毕业歌</span>
+                        <span class="icon"></span>
+                        <span class="number">213.1万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-22.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">10</span>
+                            	<span class="name">毕业歌</span>
+                        		<span class="icon"></span>
+                       			<span class="number">213.1万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>                
+            </ul>
+            <div class="dsjsx">
+            	<p class="sx">电影筛选</p>
+                <div>
+                	<p class="clearfix">
+                    	<span>类型：</span>
+                        <a href="#">喜剧</a>
+                        <a href="#">犯罪</a>
+                        <a href="#">剧情</a>
+                        <a href="#">伦理</a>
+                       
+                    </p>
+                    <p class="clearfix">
+                    	<span>地区：</span>
+                        <a href="#">大陆</a>
+                        <a href="#">香港</a>
+                        <a href="#">美国</a>
+                        <a href="#">韩国</a>
+                    </p>
+                    <p class="clearfix">
+                    	<span>年份：</span>
+                        <a href="#">2015</a>
+                        <a href="#">2014</a>
+                        <a href="#">2013</a>
+                        <a href="#">2012</a>
+                    </p>
+                    <p class="clearfix">
+                    	<span>演员：</span>
+                        <a href="#">范冰冰</a>
+                        <a href="#">杨幂</a>
+                        <a href="#">黄渤</a>
+                        <a href="#">赵薇</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cnt-5 cnt-div clearfix">
+    	<div class="cnt-5-l fl">
+        	<div class="cnt-5-l-t clearfix">
+            	<strong>电影.预告片</strong>
+                <a href="#">更多>></a>
+            </div>
+            <div class="cnt-5-l-b ">
+            	<ul class="clearfix">
+                	<li>
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-2.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>男神女神共同上演悬疑奇案</em>
+                                </span>
+                            </div>
+                            <div class="wordbox">
+                            	《我是证人》预告片
+                            </div>
+                            <span class="ygp"></span>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-3.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>《港囧》预告片歪解析</em>
+                                </span>
+                            </div>
+                            <div class="wordbox">
+                            	哔哔预告片
+                            </div>
+                            <span class="ygp"></span>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-4.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>任贤齐首执导玩坏舒淇</em>
+                                </span>
+                            </div>
+                            <div class="wordbox">
+                            	《落跑吧爱情》预告片
+                            </div>
+                            <span class="ygp"></span>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-5.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>援助在两亿两千五百万公里以外</em>
+                                </span>
+                            </div>
+                            <div class="wordbox">
+                            	《火星救援》营救版预告片
+                            </div>
+                            <span class="ygp"></span>
+                        </a>
+                    </li>
+                    <li>
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-6.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>阿宝父子相见却不相认</em>
+                                </span>
+                            </div>
+                            <div class="wordbox">
+                            	《功夫熊猫3》中文配音版预告片
+                            </div>
+                            <span class="ygp"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cnt-5-r fr">
+        	<div class="cnt-5-r-t">
+            	<strong>电影专题</strong>
+            </div>
+            <div class="cnt-5-r-b">
+            		<div class="box">
+                    	<a href="#" class="a-box">
+                        	<div class="picbox">
+                            	<img src="img/cnt-5-7.jpg" />
+                                <b></b>
+                                <span>
+                                	<em>和<老炮儿>闯威尼斯 独家贴身直击众主创</em>
+                                </span>
+                            </div>
+                         </a>   
+                        <a class="wordbox">
+                            这个七夕不虐狗 只谈论爱情
+                        </a>       
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner1 clearfix">
+    	<a href="#"><img src="img/banner1-1.png"></a>
+        <a href="#" class="zuo20"><img src="img/banner1-2.png"></a>
+    </div>
+    
+    <div class="cnt-6 cnt-div clearfix">
+    	<div class="cnt-6-l fl">
+        	<div class="cnt-6-l-t clearfix">
+            	<strong>综艺</strong>
+                <ul class="clearfix">
+                	<li><a href="#" class="on">热门</a></li>
+                    <li><a href="#">选秀</a></li>
+                    <li><a href="#">情感</a></li>
+                    <li><a href="#">访谈</a></li>
+                    
+                </ul>
+                <a href="#" class="more">更多>></a>
+            </div>
+            <div class="cnt-6-l-b">
+            	<ul class="clearfix" id="cnt-6-ul1">
+                	<li id="li-cnt-6">
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-2.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-31期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">金星脱口秀</a>
+                        </div>
+                        <div class="jq">宋佳揭与大21岁前夫忘年恋 金星曝少年被打经历</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-4.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-30期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">冲上云霄</a>
+                        </div>
+                        <div class="jq">张予曦遭泼水礼湿身</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-5.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-29期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">偶像来了</a>
+                        </div>
+                        <div class="jq">女神走秀状况百出</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-6.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-29期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">快乐大本营</a>
+                        </div>
+                        <div class="jq">“伪装者”胡歌上演心机战</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-7.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-28期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">真心英雄</a>
+                        </div>
+                        <div class="jq">张杰对抗朱亚文搞笑飙泪</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-8.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-28期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">爸爸去哪儿</a>
+                        </div>
+                        <div class="jq">社长自封刘俊美遭胖轩打脸</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-6-9.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>2015-08-28期</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">极速前进</a>
+                        </div>
+                        <div class="jq">吴昕跳崖惧高吓瘫坐地</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cnt-6-r fr">
+        	<div class="cnt-6-r-t">
+            	人气综艺榜
+            </div>
+            <ul id="ulrqzy">
+            	<li class="active7">
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">1</span>
+                    	<span class="name">哆啦A梦:伴我同行</span>
+                        <span class="icon"></span>
+                        <span class="number">774万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-15.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">1</span>
+                            	<span class="name">花千骨</span>
+                        		<span class="icon"></span>
+                       			<span class="number">605.1万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">2</span>
+                    	<span class="name">铁在烧</span>
+                        <span class="icon"></span>
+                        <span class="number">522.9万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-13.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">2</span>
+                            	<span class="name">铁在烧</span>
+                        		<span class="icon"></span>
+                       			<span class="number">522.9万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">3</span>
+                    	<span class="name">神犬小七</span>
+                        <span class="icon"></span>
+                        <span class="number">462.6万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-14.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">3</span>
+                            	<span class="name">神犬小七</span>
+                        		<span class="icon"></span>
+                       			<span class="number">462.6万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">4</span>
+                    	<span class="name">伪装者</span>
+                        <span class="icon"></span>
+                        <span class="number">423.8万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-16.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">4</span>
+                            	<span class="name">伪装者</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.8万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">5</span>
+                    	<span class="name">最佳前男友</span>
+                        <span class="icon"></span>
+                        <span class="number">423.4万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-17.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">5</span>
+                            	<span class="name">最佳前男友</span>
+                        		<span class="icon"></span>
+                       			<span class="number">423.4万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">6</span>
+                    	<span class="name">左手劈刀</span>
+                        <span class="icon"></span>
+                        <span class="number">368.5万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-18.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">6</span>
+                            	<span class="name">左手劈刀</span>
+                        		<span class="icon"></span>
+                       			<span class="number">368.5万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li> 
+                <li>
+                	<div class="s-box clearfix you-bg">
+                    	<span class="num">7</span>
+                    	<span class="name">克拉恋人</span>
+                        <span class="icon"></span>
+                        <span class="number">353.7万</span>
+                    </div>
+                    <div class="b-box">
+                    	<a href="#">
+                        	<img src="img/cnt-3-19.jpg" />
+                            <b></b>
+                            <div class="word-js clearfix">
+                            	<span class="num">7</span>
+                            	<span class="name">克拉恋人</span>
+                        		<span class="icon"></span>
+                       			<span class="number">353.7万</span>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+                               
+            </ul>
+            
+        </div>
+    </div>
+    <div class="cnt-7 cnt-div">
+    	<div class="cnt-7-l fl">
+        	<div class="cnt-7-l-t clearfix">
+            	<strong>动漫</strong>
+                <ul class="clearfix">
+                	<li><a href="#" class="on">热门</a></li>
+                    <li><a href="#">日韩</a></li>
+                    <li><a href="#">国产</a></li>
+                    <li><a href="#">欧美</a></li>
+                    
+                </ul>
+                <a href="#" class="more">更多>></a>
+            </div>
+            <div class="cnt-7-l-b">
+            	<ul class="clearfix" id="cnt-7-ul1">
+                	<li id="li-cnt-7">
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-3.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至第10集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">Charlotte夏洛特</a>
+                        </div>
+                        <div class="jq">内田真礼一人分饰两角，上演可爱偶像与不良少女！</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-4.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至9集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">赤发白雪姬</a>
+                        </div>
+                        <div class="jq">最强虐狗新番</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-5.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至28集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">王牌御史</a>
+                        </div>
+                        <div class="jq">蛇精病男主和黑长直妹子</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-6.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至6集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">英雄别闹</a>
+                        </div>
+                        <div class="jq">异世界大规模群架</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-7.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至22集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">食戟之灵</a>
+                        </div>
+                        <div class="jq">卖肉美食两不误</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-8.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至9集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">干物妹小埋</a>
+                        </div>
+                        <div class="jq">完美美女的另一面</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="picbox">
+                        	<img src="img/cnt-7-9.jpg" />
+                            <span class="opa"></span>
+                            <span class="riqi">
+                            	<em>更新至36集</em>
+                            </span>
+                            <span class="b-box"></span>
+                        </a>
+                        <div class="name">
+                        	<a href="#">中国惊奇先生</a>
+                        </div>
+                        <div class="jq">屌丝小人物的玄奇侦探作品</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cnt-7-r fr">
+        	<p class="mrgx">每日更新</p>
+            <div class="cnt-7-r-b">
+            	<div class="num clearfix" id="btnmrgx">
+                	<a href="#" class="current">一</a>
+                    <a href="#">二</a>
+                    <a href="#">三</a>
+                    <a href="#">四</a>
+                    <a href="#">五</a>
+                    <a href="#">六</a>
+                    <a href="#">日</a>
+                </div>
+                <div class="bg">
+                    <div class="xq" id="mrgx">
+                        <ul class="ul1 on">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第1季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1 ">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第2季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第4季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第5季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第6季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul1">
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第7季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li1 clearfix">
+                                <a href="#" class="date">09-07</a>
+                                <ul>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#">网球优等生 第二季</a></p>
+                                        <p class="jishu">更新至：23集</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cnt-8 cnt-div">
+    	<div class="cnt-8-t clearfix">
+        	<strong>独家策划</strong>
+            <ul class="clearfix">
+            	<li><a href="#">明星剧场</a></li>
+                <li><a href="#">音乐汇</a></li>
+                <li><a href="#">体坛荷尔蒙</a></li>
+                <li><a href="#">搞笑联播台</a></li>
+                <li><a href="#">美女时尚</a></li>
+            </ul>
+        </div>
+        <div class="cnt-8-b">
+        	<ul>
+            	<li class="li1">
+                	<a href="#">
+                    	<img src="img/cnt-8-2.jpg" />
+                        <b class="mask"></b>
+                        <div class="jswenzi">
+                        	<p class="name">花花公子女郎闺房诱惑大片</p>
+                            <p class="js">美胸翘臀好身材</p>
+                        </div>
+                	</a>
+                </li>
+                <li class="li2">
+                	<a href="#">
+                    	<img src="img/cnt-8-3.jpg" />
+                        <b class="mask"></b>
+                        <div class="jswenzi">
+                        	<p class="name">中传校花李丹温婉如玉</p>
+                            <p class="js">现代古典随意变换</p>
+                        </div>
+                        
+                	</a>
+                </li>
+                <li class="li3">
+                	<a href="#">
+                    	<img src="img/cnt-8-4.jpg"/>
+                        <b class="mask">日本宅男意淫NO.1AKB</b>
+                        <div class="jswenzi">
+                        
+                        	<p class="name">日本宅男意淫NO.1AKB</p>
+                            <p class="js">最强美臀渡边麻友夺魁</p>
+                        </div>
+                	</a>
+                </li>
+                <li class="li4">
+                	<a href="#">
+                    	<img src="img/cnt-8-5.jpg"/>
+                        <b class="mask"></b>
+                        <div class="jswenzi">
+                        	<p class="name">墨西哥美女写真秀雪肤美背</p>
+                            <p class="js">上衣险撑破</p>
+                        </div>
+                	</a>
+                </li>
+                <li class="li5">
+                	<a href="#">
+                    	<img src="img/cnt-8-6.jpg"/>
+                        <b class="mask"></b>
+                        <div class="jswenzi">
+                        	<p class="name">人大校花康逸琨晒新发型</p>
+                            <p class="js">自称永远18岁</p>
+                        </div>
+                	</a>
+                </li>
+                <li class="li6">
+                	<a href="#">
+                    	<img src="img/cnt-8-7.jpg"/>
+                        <b class="mask"></b>
+                        <div class="jswenzi">
+                        	<p class="name">武大校花黄灿灿晒照献吻网友</p>
+                            <p class="js">网友大赞灿灿瘦了</p>
+                        </div>
+                	</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner2">
+    	<a href="#"><img src="img/banner1-1.png"></a>
+        <a href="#" class="zuo20"><img src="img/banner1-2.png"></a>
+    </div>
+    <div class="ft">
+    	<div>
+        	<a href="#">意见反馈</a>
+            <span>|</span>
+            <a href="#">官方微博</a>
+            <span>|</span>
+            <a href="#">加入收藏</a>
+            <span>|</span>
+            <a href="#">版权声明</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">联系方式</a>
+        </div>
+        <p>Copyright © 360安全网址. All Rights Reserved.    <a href="#">浙ICP证B2-20090064号</a><span>信息网络传播视听节目许可证1109357号</span></p>
+    </div>
+    
+    <div id="#" class="foot"><a href="#">返<br />回<br />顶<br />部</a></div>
+</div>
+</body>
+</html>

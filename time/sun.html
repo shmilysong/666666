@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+#box{ width:1000px; height:500px; margin:120px auto; overflow:hidden; }
+#box .sun{ width:200px; height:200px; background:url(../img/1.png) no-repeat; background-size:contain; position:absolute; left:0; top:0; cursor:crosshair;}
+#box p{ font-size:30px; font-weight:bold; width:400px; position:absolute; left:50%; margin-left:-200px; top:300px;}
+</style>
+<script>
+window.onload=function(){
+	var oSun=document.querySelector('.sun');
+	var oBox = document.getElementById('box');	
+	var oP=document.querySelector('p'); 
+	oBox.onmousemove=function(ev){
+		var oEvent=ev || event;
+		oSun.style.left=oEvent.clientX-oSun.offsetWidth/2+'px';
+		oSun.style.top=oEvent.clientY-oSun.offsetHeight/2+'px';
+		
+		//阴影
+		var x=oP.offsetLeft+oP.offsetWidth/2-oEvent.clientX;
+		var y=oP.offsetTop+oP.offsetHeight/2-oEvent.clientY;
+		var c=Math.sqrt(x*x+y*y);
+		oP.style.textShadow=x/5+'px '+y/5+'px '+c/50+'px rgba(0,0,0,'+(1-c/500)+')';
+	};
+};
+</script>
+
+</head>
+
+<body>
+<div id="box">
+	<div class="sun"></div>
+    <p>太阳当空照，花儿对我笑。</p>
+</div>
+</body>
+</html>

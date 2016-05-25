@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+*{padding:0; margin:0;}
+.box{ width:1000px; height:auto; margin:0 auto;  }
+.t{ width:100%; height:160px; margin:0 auto; text-align:center; }
+.t .t_c{ width:100%;  font-size:34px; color:#999; margin-top:30px; }
+.cont p{ font-size:18px; color:#333;}
+.cont .p1{ text-indent:2em; }
+.cont .p2{ text-indent:4em; }
+.cont .p3{ text-indent:6em; }
+.cont .span1{ color:#00F; font-weight:bold; }
+</style>
+<script>
+
+</script>
+
+</head>
+
+<body>
+<div class="box">
+	<div class="t">
+    	<p class="t_c">由于本人没有服务器 只好把ajax的code写了出来。</p>
+        <p class="t_c">
+        	<span style="color:#03F; font-size:40px; ">描述：</span>区别get和post请求的区别	
+        </p>
+    </div>
+	<div class="cont">
+    <p><b>function</b> json2url(json){</p>
+	<p class="p1">json.t=<span style="color:#0FC; ">Math.random()</span>;</p>
+	<p class="p1"><span class="span1">var</span> arr=<span class="span1">[]</span>;</p>
+	<p class="p1"><span class="span1">for</span>(<span class="span1">var</span> name <span class="span1">in</span> json){</p>
+		<p class="p2">arr.<span style="color:#0FC; ">push</span>(name+'='+json[name]);</p>
+	<p class="p1">}</p>
+	<p class="p2">return arr.<span style="color:#0FC; ">join</span>(<span class="span1">'& '</span>);</p>
+<p>}</p>
+
+<p style="margin-top:10px; "><b>function</b> ajax(json){</p>
+	<p class="p1">json=json || <span class="span1">{}</span>;</p>
+	<p class="p1"><span class="span1">if</span>(!json.url)return;</p>
+	<p class="p1">json.data=json.data || <span class="span1">{}</span>;</p>
+	<p class="p1">json.type=json.type || 'get';</p>
+	<p class="p1">json.timeout=json.timeout || <span style="color:#C00; ">3000</span>;</p>
+	
+	<p class="p1" style="margin-top:10px; "><span class="span1">var</span> timer=null;</p>
+	<p style="margin-top:22px; ">//第一步创建一个ajax(兼容IE6)</p>
+	<p class="p1"><span class="span1">if</span>(<span style="color:#903; ">window</span>.XMLHttpRequest){</p>
+		<p class="p2"><span class="span1">var</span> oAjax=<span class="span1">new</span> XMLHttpRequest();</p>
+	<p class="p1">}<span class="span1">else</span>{</p>
+		<p class="p2"><span class="span1">var</span> oAjax=<span class="span1">new</span> ActiveXObject('Microsoft.XMLHTTP');</p>
+	<p class="p1">}</p>
+	<p style="margin-top:22px; ">//第二、三步打开链接、发送</p>
+	<p class="p1">switch(json.type.toLowerCase()){</p>
+		<p class="p2"><span class="span1">case</span> 'get':</p>
+			<p class="p3">oAjax.<span style="color:#903; ">open</span>(<span class="span1">'GET'</span>,json.url<span class="span1">+'?'+</span>json2url(json.data),<span class="span1">true</span>);</p>
+			<p class="p3">oAjax.send();</p>
+			<p class="p3"><span class="span1">break</span>;</p>
+		<p class="p2"><span class="span1">case</span> 'post':</p>
+			<p class="p3">oAjax.<span style="color:#903; ">open</span>('POST',json.url,true);</p>
+            <p style="text-indent:6em; ">//Post需要设置请求源头</p>
+			<p class="p3">
+            oAjax.setRequestHeader(<span class="span1">'Content-Type','application/x-www-form-urlencoded'</span>);</p>
+			<p class="p3">oAjax.send(json2url(json.data));</p>
+			<p class="p3"><span class="span1">break</span>;</p>
+	<p class="p1">}</p>
+	<p style="margin-top:22px; ">//第四步 接收</p>
+	<p class="p1" >oAjax.onreadystatechange=function(){</p>
+		<p class="p2"><span class="span1">if</span>(oAjax.readyState==4){</p>
+			<p class="p3">clearTimeout(timer);</p>
+			<p class="p2"><span class="span1">if</(oAjax.status>=200 && oAjax.status<300 || oAjax.status==304){</p>
+				<p class="p3">json.success && json.success(oAjax.responseText);</p>
+			<p class="p2">}else{</p>
+				<p class="p3">json.error && json.error(oAjax.status);</p>
+			<p class="p2">}</p>
+		<p class="p1">}</p>
+	<p>};</p>
+	
+	<p style="margin-top:40px;" class="p1">//网络超时</p>
+	<p class="p1">timer=<span style="color:#0F9; ">setTimeout</span>(function(){</p>
+		<p class="p2">alert(<span class="span1">'网络有问题'</span>);</p>
+		<p class="p2">oAjax.onreadystatechange=<b style="color:#03F; ">null</b>;</p>
+	<p class="p2">},json.timeout);</p>
+<p>}</p>
+
+
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

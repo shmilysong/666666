@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+*{padding:0; margin:0; list-style:none; }
+.box{ width:1000px; height:auto; margin:0 auto; }
+.t{ width:100%; text-align:center; }
+.t .t_c{ width:100%; font-size:30px; color:#999; }
+.cont{ width:1000px; height:auto; margin:60px auto; }
+.cont p{ font-size:20px;  }
+.cont .p1{ text-indent:2em; }
+.cont .p2{ text-indent:4em; }
+.cont .span1{ color:#03F;  }
+.foot{ width:1000px; height:600px; border:1px solid red; margin:60px auto; }
+.foot .con{ width:600px; height:400px; margin:100px auto;  }
+.foot .con .img{ width:203px; height:70px; margin-left:50px; }
+.foot .con .sear{ wodth:400px; height:34px; }
+.foot .con .te{ width:300px; height:33px; outline:none; border:1px solid #000; }
+.foot .con .but{ width:100px; height:36px; background:#03F; color:#fff; font-size:20px; text-align:center; line-height:34px; outline:none; border:0;  cursor:pointer; margin-top:-6px; }
+h2{ font-size:34px; }
+</style>
+<script src="jsonp.js"></script>
+<script>
+window.onload=function(){
+	var oTxt = document.getElementsByTagName('input')[0];
+	var oUl = document.getElementsByTagName('ul')[0];
+	oTxt.onkeyup=function(){
+		jsonp({
+			url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+			data:{
+				wd:this.value
+			},
+			success:function(json){
+				oUl.innerHTML='';
+				for(var i=0;i<json.s.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML=json.s[i];
+					oUl.appendChild(oLi);
+				}
+			}
+		});
+	};
+};
+</script>
+
+</head>
+
+<body>
+
+<div class="box">
+	<div class="t">
+    	<p class="t_c">Jsonp  Code  </p>
+        <p class="t_c"> <span style="color:#00F; font-size:22px; ">描述：</span>创建Script标签</p>
+    </div>
+	<div class="cont">
+    	<p><b>function</b> jsonp(json){</p>
+		<p class="p1">json = json||<span class="span1">{}</span>;</p>
+		<p class="p1"><span class="span1">if<span>(!json.url)<span class="span1">return</span>;</p>
+		<p class="p1">json.cbName = json.cbName||'cb';</p>
+		<p class="p1">json.data = json.data<span class="span1">||</span>{};</p>
+	
+		<p class="p1">//回调函数的名字，要随机。为了解决缓存</p>
+		<p class="p1">json.data[json.cbName] = 'show'+Math.<span style="color:#0F6; ">random()<span>;</p>
+		<p class="p1">//把函数名中的.去掉</p>
+		<p class="p1">json.data[json.cbName] = json.data[json.cbName].<span style="color:#0F9; ">replace</span>('.','');</p>
+	
+		<p class="p1"><span class="span1">var<span> arr = <span class="span1">[]</span>;</p>
+		<p class="p1"><span class="span1">for<span>(<span class="span1">var<span> i <span class="span1">in<span> json.data){</p>
+		<p class="p2">arr.push(i<span style="color:#0F9; ">+'='+</span>encodeURIComponent(json.data[i]));</p>
+		<p class="p1">}</p>
+	
+		
+		<p class="p1" style="margin-top:30px; "><span style="color:#C03; ">window</span>[json.data[json.cbName]] = function (result){</p>
+          <p class="p2">json.success<span class="span1">&& <span> json.success(result);</p>
+            <p class="p2">oH.removeChild(oS);</p>
+            <p class="p2">//把没用的函数干掉</p>
+            <p class="p2"><span style="color:#C03; ">window</span>[json.data[json.cbName]]=<span class="span1">null<span>;</p>
+        <p class="p1">}</p>
+        <p class="p1"><span class="span1">var<span> str = arr.join('&');</p>
+        <p class="p1">//开始创建script</p>
+        <p class="p1"><span class="span1">var<span> oS = <span style="color:#C03; ">document</span>.createElement('script');</p>
+        <p class="p1">oS.src=json.url+'?'+str;</p>
+        <p class="p1"><span class="span1">var<span> oH = <span style="color:#C03; ">document</span>.getElementsByTagName('head')[0];</p>
+        <p class="p1">oH.appendChild(oS);</p>
+	<p class="p1">}</p>
+    
+    </div>
+    <div class="foot">
+    	<h2>Jsonp小例子</h2>
+    	<div class="con">
+        	<img src="img/baidu.png" class="img"/><br />
+            <div class="sear">
+                <input type="text" id="test" class="te"/>
+                <a href="https://www.baidu.com/" target="_blank"><input type="button" value="百度一下" id="but" class="but"/></a>
+            </div>
+            <ul>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

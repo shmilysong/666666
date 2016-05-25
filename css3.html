@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/css3.css" rel="stylesheet"/>
+<style>
+*{padding:0; margin:0;}
+span{float:left; font-size:50px; font-weight:bold; color:#fff; opacity:0;}
+</style>
+<script src="js/move.js"></script>
+<script>
+function rnd(n,m){
+	return parseInt(Math.random()*(m-n)+n);
+}
+window.onload=function(){
+
+var str = 'CSS3和HTML5有很多炫酷的东西，也适应大时代的发展，移动端也正在占领着人们生活的各个角落，努力掌握他们，运用到各个领域、发挥他们巨大的作用。';
+	for(var i=0;i<str.length;i++){
+		var oS = document.createElement('span');
+		oS.innerHTML=str.charAt(i);
+		document.body.appendChild(oS);
+	}
+	var aS = document.body.children;
+	var i=0;
+	var timer= null;
+	timer = setInterval(function(){
+		//aS[i].style.opacity=1;
+		startMove(aS[i],{opacity:1});
+		i++;
+		if(i==str.length){
+			clearInterval(timer);
+		}
+	},250);
+	tab()
+}
+function tab(){
+	var oBox = document.getElementById('box');
+	var aDiv=oBox.querySelectorAll('a');
+	var oBtn = document.getElementById('but');
+	var bOk = true; 
+	oBtn.onclick=function(){
+		if(bOk){
+			for(var i=0; i<aDiv.length; i++){
+			aDiv[i].style.WebkitAnimationName='test';
+			aDiv[i].style.WebkitAnimationDuration='3s';
+			aDiv[i].style.WebkitAnimationDelay=i*400+'ms';
+			aDiv[i].style.WebkitAnimationFillMode='forwards';
+			aDiv[i].style.MozAnimationName='test';
+			aDiv[i].style.MozAnimationDuration='3s';
+			aDiv[i].style.MozAnimationDelay=i*400+'ms';
+			aDiv[i].style.MozAnimationFillMode='forwards';
+			aDiv[i].style.msAnimationName='test';
+			aDiv[i].style.msAnimationDuration='3s';
+			aDiv[i].style.msAnimationDelay=i*400+'ms';
+			aDiv[i].style.msAnimationFillMode='forwards';
+			}
+	}else{
+			for(var i=0; i<aDiv.length; i++){
+			aDiv[i].style.WebkitAnimationName='form';
+			aDiv[i].style.WebkitAnimationDuration='3s';
+			aDiv[i].style.WebkitAnimationDelay=-i*400+'ms';
+			aDiv[i].style.WebkitAnimationFillMode='forwards';
+			aDiv[i].style.MozAnimationName='form';
+			aDiv[i].style.MozAnimationDuration='3s';
+			aDiv[i].style.MozAnimationDelay=-i*400+'ms';
+			aDiv[i].style.MozAnimationFillMode='forwards';
+			aDiv[i].style.msAnimationName='form';
+			aDiv[i].style.msAnimationDuration='3s';
+			aDiv[i].style.msAnimationDelay=-i*400+'ms';
+			aDiv[i].style.msAnimationFillMode='forwards';
+		
+		
+			}
+		
+		}
+		bOk = !bOk;
+		};
+};
+</script>
+
+</head>
+
+<body  class="changeBg">
+<div>
+	<div class="bar">
+        <a href="index.html" class="btn btn-3">Home</a> 
+        <a href="cs.html" class="btn btn-3">Css作品</a> 
+        <a href="java.html" class="btn btn-3">JS作品</a> 
+        <a href="css3.html" class="btn btn-3 on">H5+CSS3</a> 
+        <a href="ziwojieshao.html" class="btn btn-3">关于我</a>
+	</div>
+    
+    <div id="box">
+        <input type="button" value="查看" id="but"/>
+        <a href="time/sun.html"  class="a1"  target="_blank">太阳日照</a>
+        <a href="time/test.html"  class="a2"  target="_blank">CS3进度条</a>
+        <a href="time/demo.html"  class="a3" target="_blank">canvas</a>
+        <a href="time/3D.html"  class="a4" target="_blank">3D旋转</a>
+        <a href="time/3Dbox.html"  class="a5" target="_blank">3D盒子</a>
+        <a href="time/mask.html"  class="a6" target="_blank">蒙版</a>
+        <a href="time/index.html"  class="a7" target="_blank">移动端</a>
+    </div>
+	<div class="foot">
+    	<div>
+        	
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+*{ margin:0; padding:0; list-style:none; }
+.clearfix:after{display:block;content:'';clear:both;}
+.clearfix{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+.time{ height:360px; width:640px; margin:100px auto;  text-align:center; font-size:40px; position:relative; }
+.time img{ width:640px; height:360px; }
+.time .mask{ width:640px; height:360px; background:#000; position:absolute; left:0; top:0; opacity:0.3; filter:alpha(opacity:30); }
+.time .b{ color:#fff; }
+.time .t{ width:430px; height:60px; text-align:center; border:1px solid #ceba41; border-radius:8px; position:absolute; top:50%; left:50%; margin-top:-30px; margin-left:-210px;  background:#322d0f;}
+.time .t div{ margin-top:10px; margin-left:18px;  }
+.time .t .bla{ color:#fff; }
+#t_s{ color:#ffdc66; width:48px; height:38px;  display:block; text-align:center; line-height:38px;  font-size:36px;  margin-left:8px; margin-top:7px; }
+#t_d{ color:#ffdc66;}
+#t_h{ color:#ffdc66; padding-left:12px; }
+#t_m{ color:#ffdc66;  padding-left:12px;}
+</style>
+</head>
+<body>
+  <div class="time">
+  	<a href="javascript:;"><img src="bg.jpg" alt="视秀微信直播"/></a>
+    <div class="mask"></div>
+  	<div class="t">
+    	<div class="clear"><span id="t_d" class="fl">00</span><b class="bla fl">天</b></div>
+        <div class="clear"><span id="t_h" class="fl">00</span><b class="bla fl">时</b></div>
+        <div class="clear"><span id="t_m" class="fl">00</span><b class="bla fl">分</b></div>
+        <div class="clear"><b id="t_s" class="fl">00</b><b class="b fl">秒</b></div>
+    </div>
+  </div>
+<script>
+	function toDou(iNum){
+	return iNum<10?'0'+iNum:''+iNum;
+	}
+  function Time(){
+    var EndTime= new Date('2017/09/20 00:00:00');
+    var NowTime = new Date();
+    var t =EndTime.getTime() - NowTime.getTime();
+    var d=0;
+    var h=0;
+    var m=0;
+    var s=0;
+    if(t>=0){
+      d=Math.floor(t/1000/60/60/24);
+      h=Math.floor(t/1000/60/60%24);
+      m=Math.floor(t/1000/60%60);
+      s=Math.floor(t/1000%60);
+    }
+ 
+ 
+    document.getElementById("t_d").innerHTML = toDou(d) + "<b></b>";
+    document.getElementById("t_h").innerHTML = toDou(h) + "<b></b>";
+    document.getElementById("t_m").innerHTML = toDou(m) + "<b></b>";
+    document.getElementById("t_s").innerHTML = toDou(s) + "<b></b>";
+  }
+  setInterval(Time,0);
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>宋亚广</title>
+<link href="css/index.css" rel="stylesheet"/>
+<script src="js/count.js"></script>
+<script src="js/jquery.min.js"></script>
+<!--[if lte IE 9]><script src="js/selectivizr.js"></script><![endif]-->
+<script>
+$(function(){	
+	$(window).scroll(function(){		
+		if($(window).scrollTop() >= 100){
+			$('.actGotop').fadeIn(300); 
+		}else{    
+			$('.actGotop').fadeOut(300);    
+		}  
+	});
+	$('.actGotop').click(function(){
+	$('html,body').animate({scrollTop:'0px'}, 800);});
+});
+</script>
+</head>
+<body>
+<div class="top">
+	<div class="bg one">
+    	<form method="get">
+            <input type="button" name="startDate" id="butt"/>
+          	<div id="div1" class="myCalendar">
+                <a href="javascript:;" class="prev"> &lt </a>
+                <h2>2015-08</h2>
+                <a href="javascript:;" class="next"> &gt </a>
+                <ol>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li class="week_end">六</li>
+                    <li class="week_end">日</li>
+                </ol>
+                <ul></ul>
+            </div>
+		</form>
+        
+        <audio controls autoplay loop class="mp3">
+        	<source src="mp3.mp3" type="audio/mp3"/>
+        </audio>
+        <!--时钟-->
+        <div class="bbt">
+            <div class="box">
+                <div class="hour"></div>
+                <div class="min"></div>
+                <div class="sec"></div>
+                <div class="cir"></div>
+            </div>
+        </div>
+        
+        
+        <!--导航条-->
+        <div class="bar">
+            <a href="index.html" class="btn btn-3 on">Home</a> 
+            <a href="cs.html" class="btn btn-3">Css作品</a> 
+            <a href="java.html" class="btn btn-3">JS作品</a> 
+            <a href="css3.html" class="btn btn-3">H5+CSS3</a> 
+            <a href="ziwojieshao.html" class="btn btn-3">关于我</a>
+		</div>
+        
+        <div class="buttom wobble-bottom" id="name">
+        	<a href="javascript:;">WEB前端小学生  宋亚广</a>
+        </div>
+      </div>
+     
+     <!--图片2-->
+     <div class="bg two">
+     	<h3>专业技能</h3>
+        <div class="skill">
+        	<ul>
+            	<li>
+                	<a href="javascript:;"><img src="img/css.jpg"/></a>
+                    <div class="shaw">
+                    	<a href="javascript:;">
+                            <h2><a href="javascript:;">CSS + HTML</a></h2>
+                            <p>1.熟悉W3C标准并能熟悉应用</p>
+                            <p>2.精通CSS + HTML布局</p>
+                            <p>3.熟悉各大浏览器之间的差异</p>
+                        </a>
+                     </div>
+                </li>
+                <li>
+                	<a href="javascript:;"><img src="img/js.jpg"/></a>
+                    <div class="shaw">
+                    	<h2><a href="javascript:;">Javascript</a></h2>
+                        <div class="on">
+                        	<p>1.熟悉书写原生JS，脱离库。</p>
+                            <p>2.了解ajax、jsonp可以进行简单的交互</p>
+                            <p>3.了解使用MVC框架结构模式。</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                	<a href="javascript:;"><img src="img/h5.jpg"/></a>
+                    <div class="shaw">
+                    	<h2><a href="javascript:;">CSS3 + HTML5</a></h2>
+                        <div class="on">
+                        	<p>1.熟悉H5和CSS3的相关技术。</p>
+                            <p>2.对移动端开发有较强的理解和兴趣。</p>
+                            <p>3.了解Canvas,svg并能进行简单的画图。</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+     </div>
+     
+     
+     <!--图片4-->
+     <div class="bg four">
+     	<div class="foot">
+        	<h2 class="button pulse-shrink">Please contact me</h2>
+            <h2 class="button pulse-shrink">TEL : 15811549916</h2>
+            <h2 class="button pulse-shrink">QQ : 927941419</h2> 
+            <h2 class="button pulse-shrink">Email : Ityaguang@sina.com</h2>
+        </div>
+     </div>
+     <div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>
+   </div>
+   
+
+<!--
+<div id="main">
+	<div id="div1"></div>
+</div>
+-->
+
+</body>
+</html>
+
+
+
+
+

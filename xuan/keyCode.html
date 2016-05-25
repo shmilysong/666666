@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{ margin:0; padding:0;}
+	div{ width:730px; height:454px; margin:100px auto;}
+</style>
+<script>
+	window.onload = function()
+	{
+		var odiv = document.getElementsByTagName('div')[0];
+		var oimg = odiv.getElementsByTagName('img')[0];
+		var count = 0;
+		document.onkeydown = function(ev)
+		{
+			var oEvent = ev||event;
+			if(oEvent.keyCode ==37)
+			{
+				count--;
+				if(count < 0)
+				{
+					count = 4;	
+				}
+				oimg.src = 'img/b'+count+'.jpg';	
+			}
+			else if(oEvent.keyCode == 39)
+			{
+				count++;
+				if(count == 5)
+				{
+					count = 0;	
+				}
+				oimg.src = 'img/b'+count+'.jpg';	
+			}
+		}	
+	}
+</script>
+</head>
+
+<body>
+<div>
+	<img src="img/b0.jpg"/>
+</div>
+</body>
+</html>

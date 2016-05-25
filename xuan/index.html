@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+*{margin:0; padding:0; list-style:none;}
+#box{width:100%; height:800px; margin:0 auto; position:relative;top:0; left:0;}
+#box a{ text-decoration:none; position:absolute; width:100px; height:80px; background:rgba(0,0,0,0.5); top:50%; margin-top:-40px; text-align:center; line-height:80px; color:#fff; font-weight:bold; font-size:30px; display:none;}
+#box a:hover{background:rgba(255,51,0,0.5);}
+#box .prev{left:0;}
+#box .next{right:0;}
+#box ul li{width:100%; height:800px; display:none;}
+#box ul li.on{display:block;}
+#box ul li img{width:100%; height:700px;}
+#box ol{position:absolute; height:30px; width:200px; bottom:40px; left:50%; margin-left:-105px;}
+#box ol li.on{background:rgba(255,51,0,0.5);}
+#box ol li{width:30px; height:30px; text-indent:-999999px; background:rgba(102,204,255,0.5); border-radius:50%; float:left; margin-right:10px;}
+</style>
+<script>
+window.onload=function(){
+	var oBox = document.getElementById('box');
+	var oUl = oBox.getElementsByTagName('ul')[0];
+	var aLi = oUl.getElementsByTagName('li');
+	var oOl = oBox.getElementsByTagName('ol')[0];
+	var aBtn = oOl.getElementsByTagName('li');
+	var oPrev = oBox.getElementsByTagName('a')[0];
+	var oNext = oBox.getElementsByTagName('a')[1];
+	var iNow = 0;
+	
+	for(var i=0;i<aBtn.length;i++){
+		(function(index){
+			aBtn[i].onmouseover=function(){
+				iNow=index;
+				tab();
+			};
+		})(i);
+	}
+	function tab(){
+		for(var i=0;i<aBtn.length;i++){
+			aBtn[i].className='';
+			aLi[i].className='';
+		}
+		aBtn[iNow].className='on';
+		aLi[iNow].className='on';
+	}
+	oPrev.onclick=function(){
+		iNow--;
+		if(iNow<0){
+			iNow=aBtn.length-1;
+		}
+		tab();
+	};
+	oNext.onclick=next;
+	function next(){
+		iNow++;
+		if(iNow==aBtn.length){
+			iNow=0;
+		}
+		tab();
+	}
+	var timer = setInterval(next,1000);
+	
+	oBox.onmouseover=function(){
+		oPrev.style.display='block';
+		oNext.style.display='block';
+		clearInterval(timer);
+	};
+	oBox.onmouseout=function(){
+		oPrev.style.display='none';
+		oNext.style.display='none';
+		timer = setInterval(next,1000);
+	};
+};
+</script>
+
+</head>
+
+<body>
+<div id="box">
+	<ul>
+    	<li class="on"><img src="img/curry.jpg" /></li>
+    	<li><img src="img/jame.jpg" /></li>
+    	<li><img src="img/kobe1.jpg" /></li>
+    	<li><img src="img/kobe2.jpeg" /></li>
+    	<li><img src="img/wade.jpg" /></li>
+    </ul>
+    <ol>
+    	<li class="on">1</li>
+    	<li>2</li>
+    	<li>3</li>
+    	<li>4</li>
+    	<li>5</li>
+    </ol>
+    <a href="javascript:;" class="prev">prev</a>
+    <a href="javascript:;" class="next">next</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

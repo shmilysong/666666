@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/css.css" rel="stylesheet"/>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){	
+	$(window).scroll(function() {		
+		if($(window).scrollTop() >= 100){
+			$('.actGotop').fadeIn(300); 
+		}else{    
+			$('.actGotop').fadeOut(300);    
+		}  
+	});
+	$('.actGotop').click(function(){
+	$('html,body').animate({scrollTop: '0px'}, 800);});	
+});
+</script>
+
+</head>
+
+<body>
+<div class="top">
+	<img src="img/y.png" style="width:100%;"/>
+	<!--导航-->
+	<div class="bar">
+		<a href="index.html" class="btn btn-3">Home</a> 
+		<a href="cs.html" class="btn btn-3 on">Css作品</a> 
+		<a href="java.html" class="btn btn-3">JS作品</a> 
+		<a href="css3.html" class="btn btn-3">H5+CSS3</a> 
+		<a href="ziwojieshao.html" class="btn btn-3">关于我</a>
+	</div>
+   
+    
+    <div class="list">
+    	<ul>
+        	<li><a href="#1F">京东静态页</a></li>
+            <li><a href="#2F">美团详情页</a></li>
+            <li><a href="#3F">美团列表页</a></li>
+            <li><a href="#4F">美丽说</a></li>
+            <li><a href="#5F">360</a></li>
+            <li><a href="#6F">视秀科技</a></li>
+        </ul>
+    </div>
+    
+    <div class="con">
+    <img src="img/xx.png"/>
+    	<div class="jian">
+        	<h2>一些自己写的网页</h2>
+            <p>这是自己以前利用工作之余切的静态网页，有的素材是找朋友要的，切了一些电商和其他网站的页面，静态页面没有刻意去处理兼容IE(IE8以下)低版本问题，本人不怎么喜欢处理IE低版本的问题，随着科技的发展，会慢慢的淘汰掉IE低版本，但是一些低版本兼容的解决方法还是要掌握的，这个是必须的。嗯！是肯定要知道的。 感觉这些网站各有特点。希望通过切这些网站来提高自己的布局问题，在以后的工作中布局更加的流畅！！！</p>
+        </div>
+        
+        <img src="img/xx.png"/>
+    	<div class="jd" id="1F">
+        	<h2>京东静态首页</h2>
+        	<p>描述：京东商城利用的CSS+Div布局较多，还有利用选项卡功能，只要有耐心和细心，每个人都可以切得很完美！！！完美！！！(个人觉得我这个不完美。。。)  兼容到IE9+</p>
+            <div><a href="jd/jd.html" target="_blank"><img src="img/jd.jpg"/></a></div>
+        </div>
+        
+    	<img src="img/xx.png"/>
+        <div class="mtx" id="2F">
+        	<h2>美团详情页</h2>
+        	<p>描述：美团详情页和大多数网页个人感觉差不多，利用CSS+DIV布局，这个详情页小图标比较多，做前端要有耐心，细心，恒心(感觉在像老师讲课  哈哈。。。)，只要你努力，一定会成功的。兼容到IE8+</p>
+            <div><a href="mtx/xq.html" target="_blank"><img src="img/mtx.jpg"/></a></div>
+        </div>
+        
+        <img src="img/xx.png"/>
+        <div class="mtl" id="3F">
+        	<h2>美团列表页</h2>
+        	<p>描述：万能的CSS+DIV布局再一次展现的淋漓尽致，任何静态网页都离不开最基本的css+div布局，尽情的发挥你强大的作用吧！！！</p>
+            <div><a href="mtl/lb.html" target="_blank"><img src="img/mtl.png"/></a></div>
+        </div>
+        
+       	<img src="img/xx.png"/>
+    	<div class="jd" id="4F">
+        	<h2>美丽说静态首页</h2>
+        	<p>描述：一大波漂亮的妹子将要来袭！！！    哈哈 O(∩_∩)O   兼容到IE8+</p>
+            <div><a href="mls/mls.html" target="_blank"><img src="img/mls.jpg"/></a></div>
+        </div>
+        
+        
+        <img src="img/xx.png"/>
+    	<div class="jd" id="5F">
+        	<h2>360静态首页</h2>
+        	<p>描述：选项卡发挥的恰到好处，多处都运用到了，还有遮罩层等。嗯！！！ 目前利用空暇时间就切了那么多静态网页。以后再接再厉，切到天荒地老！！！  哈哈  兼容到IE8+</p>
+            <div><a href="kk/kk.html" target="_blank"><img src="img/kk.jpg"/></a></div>
+        </div>
+        
+        <img src="img/xx.png"/>
+    	<div class="jd" id="6F">
+        	<h2>北京视秀科技发展有限公司</h2>
+        	<p>描述：完成静态页面的开发，后台页面的开发，登陆页面。</p>
+            <div><a href="http://www.shixiutv.com/" target="_blank"><img src="img/shi.png"/></a></div>
+        </div>
+        
+       <div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>  
+       
+    </div>
+    <img src="img/t.png" style="width:100%; margin-bottom:-5px; "/>
+ </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
